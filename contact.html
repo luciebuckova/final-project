@@ -1,12 +1,32 @@
-<!DOCTYPE html>
-<html lang="cs">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RTB 2023: Come to visit us or send us a message!</title>
-</head>
-<body>
-    
-</body>
-</html>
+---
+layout: layouts/template.njk
+title: RTB 2023 | Come to visit us or send us a message!
+---
+
+<h3>Come to visit us!</h3>
+
+<picture>
+    <source media="(max-width: 390px)" srcset="/images/office-390w.jpg">
+    <source media="(max-width: 834px)" srcset="/images/office-834w.jpg">
+    <source media="(min-width: 835px)" srcset="/images/office-1440w.jpg">
+    <img src="/images/office-390w.jpg" alt="Photo of our office">
+</picture>
+
+<span>Race Through Beskids s. r. o., Bike Street 123, 739 14 Ostravice, Czech Republic</span>
+
+<span>info@rtb.com | +420 777 123 123</span>
+
+<h3>Write us a message</h3>
+
+<form action="" method="post">
+    <label for="name">Your Name</label>
+    <input type="text" name="name" id="name">
+
+    <label for="email">Email Address</label>
+    <input type="email" name="email" id="email">
+
+    <label for="message">Your Message</label>
+    <textarea name="message" id="message" cols="10" rows="10"></textarea>
+
+    <button type="submit">Send a Message</button>
+</form>

@@ -1,12 +1,37 @@
-<!DOCTYPE html>
-<html lang="cs">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RTB 2023: Register for our self-supported race through Beskids.</title>
-</head>
-<body>
-    
-</body>
-</html>
+---
+layout: layouts/template.njk
+title: RTB 2023 | Register for our self-supported race through Beskids!
+---
+
+<h3>Registration for RTB 2023</h3>
+
+<span>03.08.2023 - 05.08.2023, Ostravice</span>
+
+<form action="" method="post">
+    <label for="firstName">First Name</label>
+    <input type="text" name="firstName" id="firstName">
+
+    <label for="secondName">Second Name</label>
+    <input type="text" name="secondName" id="secondName">
+
+    <label for="dateOfBirth">Date of Birth</label>
+    <input type="datetime-local" name="dateOfBirth" id="dateOfBirth">
+
+    <label for="email">Email Address</label>
+    <input type="email" name="email" id="email">
+
+    <label for="phone">Phone Number</label>
+    <input type="tel" name="phone" id="phone">
+
+    <label for="bike">Your Bike</label>
+    <input type="text" name="bike" id="bike">
+
+    <button type="submit">Register</button>
+</form>
+
+<picture>
+    <source media="(max-width: 390px)" srcset="/images/picture4-390w.jpg">
+    <source media="(max-width: 834px)" srcset="/images/picture4-834w.jpg">
+    <source media="(min-width: 835px)" srcset="/images/picture4-1440w.jpg">
+    <img src="/images/picture4-390w.jpg" alt="Gravel cycling">
+</picture>
