@@ -1,0 +1,53 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/mixins' as mix;
+
+.button {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 20px 40px;
+    border-radius: 4px;
+    margin-top: var.$spacing;
+    @include mix.tablet {
+        margin-top: var.$spacing-double;
+    }    
+    @include mix.desktop {
+        margin-top: var.$spacing-triple;
+        font-size: 20px;
+    }    
+    &--primary {
+        color: var.$primary-color-20;
+        background-color: hsla(40, 100%, 95%, 0.75);
+        &:hover {
+            background-color: var.$primary-color-95;
+        }
+    }
+    &--secondary {
+        color: white;
+        background-color: hsla(40, 100%, 10%, 0.75);
+        &:hover {
+            background-color: var.$primary-color-10;
+        }
+    }
+    &--tertiary {
+        padding: 0;
+        margin-top: var.$spacing;
+        margin-bottom: var.$spacing-double;
+        color: var.$primary-color-20;
+        text-transform: uppercase;
+        &:hover {
+            color: var.$primary-color;
+        }
+    }
+    &--left {
+        margin-left: var.$spacing;
+        @include mix.tablet {
+            margin-left: var.$spacing-double;
+        }    
+        @include mix.desktop {
+            margin-left: var.$spacing-quadruple;
+        }
+    }
+}
+

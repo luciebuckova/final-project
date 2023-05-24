@@ -1,3 +1,6 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/mixins' as mix;
+
 @font-face {
     font-family: nexa;
     src: url(/fonts/nexa_light.otf);
@@ -12,4 +15,53 @@
 
 body {
     font-family: nexa;
+    color: var.$primary-color-10;
 }
+
+.section-headline {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    color: var.$primary-color-20;
+    margin-top: var.$spacing-double;
+    @include mix.tablet {
+        font-size: 24px;
+        text-align: left;
+        padding: 0 var.$spacing-double;
+    }    
+    @include mix.desktop {
+        font-size: 32px;
+        margin-top: var.$spacing-triple;
+        padding: 0 var.$spacing-quadruple;
+    }
+}
+
+.paragraph {
+    text-align: center;
+    line-height: 1.6;
+    margin-top: var.$spacing;
+    padding: 0 var.$spacing;
+    @include mix.tablet {
+        text-align: left;
+        padding: 0 var.$spacing-double;
+    }    
+    @include mix.desktop {
+        padding: 0 var.$spacing-quadruple;
+    }
+    &--bold {
+        font-weight: bold;
+    }
+  
+}
+
+.card__text {
+    font-weight: bold;
+    @include mix.tablet {
+        font-size: 20px;
+    }    
+    @include mix.desktop {
+        font-size: 24px;
+    }
+}
+

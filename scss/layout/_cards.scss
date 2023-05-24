@@ -1,0 +1,46 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/mixins' as mix;
+
+.card-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var.$spacing;
+    margin-top: var.$spacing;
+    @include mix.desktop {
+        gap: var.$spacing-double;
+        margin-top: var.$spacing-double;
+    }
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 150px 150px;
+    grid-template-rows: auto auto;
+    gap: var.$spacing;
+    @include mix.tablet {
+        grid-template-columns: 170px 170px;
+        grid-template-rows: auto auto;
+    }
+    @include mix.desktop {
+        grid-template-columns: 170px 170px 170px 170px;
+        grid-template-rows: auto;
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var.$spacing;
+}
+
+.card__icon {
+    width: 50px;
+    @include mix.tablet {
+        width: 75px;
+    }
+    @include mix.desktop {
+        width: 100px;
+    }
+}

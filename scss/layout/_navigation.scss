@@ -1,0 +1,63 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/mixins' as mix;
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+	padding: var.$spacing-half;
+	@include mix.tablet {
+		padding: var.$spacing-half var.$spacing-double;
+	}
+	@include mix.desktop {
+		padding: var.$spacing-half var.$spacing-quadruple;
+	}
+}
+
+.menu__checkbox {
+	position: absolute;
+	left: -9999px;
+}
+
+.menu__toggler {
+	cursor: pointer;
+}
+
+.menu__list {
+	display: none;
+}
+
+.menu__link {
+	display: block;
+	padding: var.$spacing-half;
+	color: var.$primary-color-10;
+	text-decoration: none;
+    background-color: var.$primary-color-95;
+	&:hover {
+		font-weight: bold;
+	}
+}
+
+.menu__link--active::after {
+	content:"";
+	display: block;
+	width: var.$spacing-double;
+	height: 2px;
+	background-color: var.$primary-color;
+}
+
+.menu__checkbox:checked ~ .menu__list {
+    display: block;
+    position: absolute;
+    z-index: 999;
+    top: var.$spacing;
+    right: var.$spacing-double;
+}
+
+@include mix.tablet {
+	.menu__toggler {
+		display: none;
+	}
+	.menu__list {
+		display: flex;
+	}
+}

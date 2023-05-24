@@ -1,0 +1,62 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/mixins' as mix;
+
+.hero {
+    background-image: url(/images/hero-image.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: cover;
+    padding: var.$spacing;
+    min-height: 390px;
+    @include mix.tablet {
+        min-height: 450px;
+        padding: var.$spacing-double;
+    }
+    @include mix.desktop {
+        min-height: 750px;
+        padding: var.$spacing-quadruple;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include mix.tablet {
+        align-items: start;
+    }
+}
+
+.headline,
+.subheadline {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    @include mix.tablet {
+        text-align: left;
+    }
+}
+
+.headline {
+    font-size: 48px;
+    &--color {
+        color: var.$primary-color;
+    }
+    @include mix.tablet {
+        font-size: 64px;
+    }    
+    @include mix.desktop {
+        font-size: 100px;
+    }
+}
+
+.subheadline {
+    margin-top: var.$spacing-half;
+    font-size: 16px;
+    @include mix.tablet {
+        margin-top: var.$spacing;
+        font-size: 20px;
+    }    
+    @include mix.desktop {
+        margin-top: var.$spacing-double;
+        font-size: 32px;
+    }
+}
