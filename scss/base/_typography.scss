@@ -35,9 +35,13 @@ body {
         margin-top: var.$spacing-triple;
         padding: 0 var.$spacing-quadruple;
     }
+    &--center {
+        text-align: center;
+    }
 }
 
-.paragraph {
+.paragraph,
+p {
     text-align: center;
     line-height: 1.6;
     margin-top: var.$spacing;
@@ -52,7 +56,9 @@ body {
     &--bold {
         font-weight: bold;
     }
-  
+    &--center {
+        text-align: center;
+    }
 }
 
 .card__text {
@@ -63,5 +69,9 @@ body {
     @include mix.desktop {
         font-size: 24px;
     }
+}
+
+.required {
+    color:tomato;
 }
 

@@ -5,33 +5,48 @@ title: RTB 2023 | Register for our self-supported race through Beskids!
 
 <h3 class="section-headline">Registration for RTB 2023</h3>
 
-<span class="paragraph paragraph--bold">03.08.2023 - 05.08.2023, Ostravice</span>
+<p class="paragraph paragraph--bold">03.08.2023 - 05.08.2023, Ostravice</p>
 
 <form class="form" action="https://submit-form.com/L4aumZrc" method="post">
-    <label class="form__label" for="firstName">First Name</label>
-    <input class="form__field" type="text" name="firstName" id="firstName">
 
-    <label class="form__label" for="secondName">Second Name</label>
-    <input class="form__field" type="text" name="secondName" id="secondName">
+    <input type="hidden" name="_redirect" value="http://czechitas.cz">
 
-    <label class="form__label" for="dateOfBirth">Date of Birth</label>
-    <input class="form__field" type="datetime-local" name="dateOfBirth" id="dateOfBirth">
+    <div class="form__items">
 
-    <label class="form__label" for="email">Email Address</label>
-    <input class="form__field" type="email" name="email" id="email">
+        <div class="form__item">
+            <label class="form__label" for="firstName">First Name<span class="required"> *</span></label>
+            <input class="form__field" type="text" name="firstName" id="firstName" required>
+        </div>
 
-    <label class="form__label" for="phone">Phone Number</label>
-    <input class="form__field" type="tel" name="phone" id="phone">
+        <div class="form__item">
+            <label class="form__label" for="secondName">Second Name<span class="required"> *</span></label>
+            <input class="form__field" type="text" name="secondName" id="secondName" required>
+        </div>
 
-    <label class="form__label" for="bike">Your Bike</label>
-    <input class="form__field" type="text" name="bike" id="bike">
+        <div class="form__item">
+            <label class="form__label" for="dateOfBirth">Date of Birth<span class="required"> *</span></label>
+            <input class="form__field" type="date" name="dateOfBirth" id="dateOfBirth" required>
+        </div>
 
-    <button class="button button--secondary" type="submit">Register</button>
+        <div class="form__item">
+            <label class="form__label" for="email">Email Address<span class="required"> *</span></label>
+            <input class="form__field" type="email" name="email" id="email" required>
+        </div>
+
+        <div class="form__item">
+            <label class="form__label" for="phone">Phone Number<span class="required"> *</span></label>
+            <input class="form__field" type="tel" name="phone" id="phone" required>
+        </div>
+
+        <div class="form__item">
+            <label class="form__label" for="bike">Your Bike</label>
+            <input class="form__field" type="text" name="bike" id="bike">
+        </div>
+
+    </div>
+
+    <button class="button button--secondary button--submit" type="submit">Register</button>
+    
 </form>
 
-<picture class="image">
-    <source media="(max-width: 390px)" srcset="/images/picture4-390w.jpg">
-    <source media="(max-width: 834px)" srcset="/images/picture4-834w.jpg">
-    <source media="(min-width: 835px)" srcset="/images/picture4-1440w.jpg">
-    <img src="/images/picture4-390w.jpg" alt="Gravel cycling">
-</picture>
+<img class="image--large" src="/images/picture4-1440w.jpg" alt="Gravel cycling">

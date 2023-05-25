@@ -17,15 +17,9 @@ body {
     }
 }
 
-.image {
-    display: block;
-    margin: var.$spacing auto;
-    @include mix.tablet {
-        margin: var.$spacing var.$spacing-double;
-    }
-    @include mix.desktop {
-        margin: var.$spacing var.$spacing-quadruple;
-    }
+.image--large {
+    width: 100%;
+    margin-top: var.$spacing;
 }
 
 .article {

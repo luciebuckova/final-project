@@ -41,7 +41,6 @@
         }
     }
     &--left {
-        margin-left: var.$spacing;
         @include mix.tablet {
             margin-left: var.$spacing-double;
         }    
